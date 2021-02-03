@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Interface.Repositories;
+using Microsoft.Extensions.DependencyInjection;
+using Repository.Repositories;
 
 namespace API
 {
@@ -11,6 +13,7 @@ namespace API
 
         private static void RepositoryDependency(IServiceCollection services)
         {
+            services.AddScoped<IRepositoryCidade, RepositoryCidade>();
         }
     }
 }
