@@ -1,17 +1,17 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Repository.Common.Contexts
+namespace Repository.Contexts
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions) : base(dbContextOptions)
         {
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
         public DbSet<Cidade> Cidades { get; set; }
-        
+
         public DbSet<Cliente> Clientes { get; set; }
 
         public DbSet<Produto> Produtos { get; set; }
@@ -22,7 +22,7 @@ namespace Repository.Common.Contexts
 
         public DbSet<ProdutoPromocao> ProdutoPromocoes { get; set; }
 
-        public DbSet<ProdutoCombo> ProdutosCombos { get; set; }
+        public DbSet<Combo> Combos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

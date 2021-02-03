@@ -1,0 +1,8 @@
+﻿
+Adicionar Migration inicial:
+Add-Migration Initial -Project Repository -StartupProject API -Context ApplicationDbContext
+
+Para verificar script de criação SQL:
+Script-Migration
+
+Para executar as mudanças no banco de dados:

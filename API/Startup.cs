@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Repository.Common.Contexts;
+using Repository.Contexts;
 
 namespace API
 {
@@ -21,13 +21,13 @@ namespace API
         {
             DependencyInjection.Register(services);
 
-            services.AddControllers();
-
             //For In Memory Database
             //services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("ConnectionStringSQL"));
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("ConnectionStringSQL")));
+                options.UseSqlServer(Configuration.GetConnectionString("AppString")));
+
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

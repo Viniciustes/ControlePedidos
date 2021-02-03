@@ -7,6 +7,8 @@ namespace Domain.Entities
     {
         public string Nome { get; set; }
 
+        public decimal Preco { get; set; }
+
         public DateTime DataValidadePromocao { get; set; }
 
         public int IdProduto { get; set; }

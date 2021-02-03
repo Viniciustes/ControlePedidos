@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace API
 {
@@ -7,12 +6,11 @@ namespace API
     {
         public static void Register(IServiceCollection services)
         {
-            RepositoryDependence(services);
+            RepositoryDependency(services);
         }
 
-        private static void RepositoryDependence(IServiceCollection services)
+        private static void RepositoryDependency(IServiceCollection services)
         {
-            throw new NotImplementedException();
         }
     }
 }

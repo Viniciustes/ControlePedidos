@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities
+﻿using System.Collections.Generic;
+
+namespace Domain.Entities
 {
     public class Imagem : BaseEntity
     {
@@ -7,5 +9,7 @@
         public string Arquivo { get; set; }
 
         public bool Principal { get; set; }
+
+        public List<Produto> Produtos { get; set; }
     }
 }

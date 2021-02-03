@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py

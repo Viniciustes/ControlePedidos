@@ -7,11 +7,11 @@ namespace Domain.Entities
     {
         public string Numero { get; set; }
 
-        public virtual List<ProdutoPedido> Produtos { get; set; }
-
         public decimal ValorPedido { get; set; }
 
         public TimeSpan Entrega { get; set; }
+
+        public virtual List<ProdutoPedido> Produtos { get; set; }
 
         public int IdCliente { get; set; }
         public virtual Cliente Cliente { get; set; }

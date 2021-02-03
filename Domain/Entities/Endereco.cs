@@ -17,5 +17,8 @@ namespace Domain.Entities
 
         public int IdCidade { get; set; }
         public virtual Cidade Cidade { get; set; }
+
+        // For Mapping One To One
+        public virtual Cliente Cliente { get; set; }
     }
 }
