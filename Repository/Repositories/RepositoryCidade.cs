@@ -1,5 +1,5 @@
 ﻿using Domain.Entities;
-using Interface.Repositories;
+using Domain.Interfaces.Repositories;
 using Repository.Contexts;
 
 namespace Repository.Repositories
